@@ -1,0 +1,23 @@
+{
+  "name": "file-explorer-app",
+  "version": "1.0.0",
+  "description": "Windows Explorer-like web application",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"bun run dev:backend\" \"bun run dev:frontend\"",
+    "dev:backend": "cd packages/backend && bun run dev",
+    "dev:frontend": "cd packages/frontend && bun run dev",
+    "build": "bun run build:backend && bun run build:frontend",
+    "build:backend": "cd packages/backend && bun run build",
+    "build:frontend": "cd packages/frontend && bun run build",
+    "test": "bun run test:backend && bun run test:frontend",
+    "test:backend": "cd packages/backend && bun run test",
+    "test:frontend": "cd packages/frontend && bun run test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
