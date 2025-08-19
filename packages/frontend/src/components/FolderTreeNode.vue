@@ -89,19 +89,19 @@ const onChildToggle = (folderId: string) => {
 }
 
 .folder-item:hover {
-  background-color: #e9ecef;
+  background-color: #f1f5f9;
   transform: translateX(2px); /* Subtle slide effect on hover */
 }
 
 .folder-item.selected {
-  background-color: #007bff;
+  background-color: #1e293b;
   color: white;
   transform: translateX(2px);
-  box-shadow: 0 1px 3px rgba(0, 123, 255, 0.3); /* Subtle shadow for selected */
+  box-shadow: 0 1px 3px rgba(30, 41, 59, 0.2);
 }
 
 .folder-item.selected:hover {
-  background-color: #0056b3;
+  background-color: #334155;
   transform: translateX(3px); /* Slightly more movement when selected and hovered */
 }
 
@@ -125,14 +125,21 @@ const onChildToggle = (folderId: string) => {
   border-radius: 2px;
   transition: all 0.15s ease-in-out;
   flex-shrink: 0;
+  color: #64748b;
 }
 
 .expand-button:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(100, 116, 139, 0.12);
+  color: #475569;
+}
+
+.folder-item.selected .expand-button {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .folder-item.selected .expand-button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
 }
 
 .expand-icon {
@@ -175,7 +182,7 @@ const onChildToggle = (folderId: string) => {
   top: 0;
   bottom: 0;
   width: 1px;
-  background-color: #dee2e6;
+  background-color: #e2e8f0;
 }
 
 /* Indentation for nested levels */

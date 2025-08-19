@@ -209,8 +209,8 @@ html, body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   font-size: 14px;
   line-height: 1.4;
-  color: #343a40;
-  background-color: #f8f9fa;
+  color: #1e293b;
+  background-color: #f8fafc;
 }
 
 #app {
@@ -233,23 +233,24 @@ html, body {
 }
 
 .app-header {
-  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  background-color: #1e293b;
   color: white;
-  padding: 12px 24px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
 }
 
 .app-title {
   margin: 0;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .app-subtitle {
-  margin: 2px 0 0 0;
-  font-size: 12px;
-  opacity: 0.9;
+  margin: 4px 0 0 0;
+  font-size: 13px;
+  opacity: 0.8;
+  font-weight: 400;
 }
 
 .app-main {
@@ -265,22 +266,22 @@ html, body {
 .left-panel {
   width: var(--left-panel-width);
   flex-shrink: 0;
-  background-color: #f8f9fa;
-  border-right: 1px solid #dee2e6;
+  background-color: #ffffff;
+  border-right: 1px solid #e2e8f0;
   overflow: hidden;
 }
 
 .resizer {
   width: 4px;
-  background-color: #dee2e6;
+  background-color: #e2e8f0;
   cursor: col-resize;
   flex-shrink: 0;
   position: relative;
-  transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.2s ease;
 }
 
 .resizer:hover {
-  background-color: #007bff;
+  background-color: #94a3b8;
 }
 
 .resizer::after {

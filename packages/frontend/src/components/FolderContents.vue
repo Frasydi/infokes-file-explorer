@@ -286,20 +286,20 @@ const formatDate = (dateString: string): string => {
 
 .contents-header {
   padding: 16px 24px;
-  border-bottom: 1px solid #dee2e6;
-  background-color: #f8f9fa;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #f8fafc;
 }
 
 .contents-header h3 {
   margin: 0 0 4px 0;
-  font-size: 18px;
-  font-weight: 600;
-  color: #343a40;
+  font-size: 17px;
+  font-weight: 500;
+  color: #1e293b;
 }
 
 .folder-path {
   font-size: 12px;
-  color: #6c757d;
+  color: #64748b;
   font-family: monospace;
 }
 
@@ -317,14 +317,14 @@ const formatDate = (dateString: string): string => {
   justify-content: center;
   height: 200px;
   gap: 16px;
-  color: #6c757d;
+  color: #64748b;
 }
 
 .loading-spinner {
   width: 32px;
   height: 32px;
-  border: 3px solid #f3f3f3;
-  border-top: 3px solid #007bff;
+  border: 3px solid #f1f5f9;
+  border-top: 3px solid #1e293b;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -341,7 +341,7 @@ const formatDate = (dateString: string): string => {
   justify-content: center;
   height: 200px;
   gap: 12px;
-  color: #dc3545;
+  color: #ef4444;
 }
 
 .error-icon {
@@ -400,8 +400,8 @@ const formatDate = (dateString: string): string => {
   align-items: center;
   justify-content: space-between;
   padding: 12px 24px;
-  border-bottom: 1px solid #dee2e6;
-  background-color: #f8f9fa;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #f8fafc;
   gap: 16px;
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
@@ -414,22 +414,24 @@ const formatDate = (dateString: string): string => {
 
 .view-button {
   padding: 6px 10px;
-  border: 1px solid #ced4da;
+  border: 1px solid #cbd5e1;
   background-color: #ffffff;
   cursor: pointer;
   border-radius: 4px;
   font-size: 14px;
   transition: all 0.15s ease-in-out;
   min-width: 36px; /* Ensure minimum width */
+  color: #475569;
 }
 
 .view-button:hover {
-  background-color: #e9ecef;
+  background-color: #f1f5f9;
+  border-color: #94a3b8;
 }
 
 .view-button.active {
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #1e293b;
+  border-color: #1e293b;
   color: white;
 }
 
@@ -442,36 +444,40 @@ const formatDate = (dateString: string): string => {
 
 .sort-select {
   padding: 6px 8px;
-  border: 1px solid #ced4da;
+  border: 1px solid #cbd5e1;
   border-radius: 4px;
   font-size: 14px;
   min-width: 140px; /* Ensure minimum width */
+  color: #475569;
+  background-color: #ffffff;
 }
 
 .sort-order-button {
   padding: 6px 10px;
-  border: 1px solid #ced4da;
+  border: 1px solid #cbd5e1;
   background-color: #ffffff;
   cursor: pointer;
   border-radius: 4px;
   font-size: 14px;
   transition: all 0.15s ease-in-out;
   min-width: 36px; /* Ensure minimum width */
+  color: #475569;
 }
 
 .sort-order-button:hover {
-  background-color: #e9ecef;
+  background-color: #f1f5f9;
+  border-color: #94a3b8;
 }
 
 .sort-order-button.active {
-  background-color: #6c757d;
-  border-color: #6c757d;
+  background-color: #64748b;
+  border-color: #64748b;
   color: white;
 }
 
 .items-count {
   font-size: 12px;
-  color: #6c757d;
+  color: #64748b;
   white-space: nowrap;
   flex: 1; /* Take remaining space */
   text-align: right; /* Align to right */
@@ -500,7 +506,7 @@ const formatDate = (dateString: string): string => {
   display: flex;
   align-items: center;
   padding: 16px; /* Increased padding */
-  border: 1px solid #dee2e6;
+  border: 1px solid #e2e8f0;
   border-radius: 8px; /* Slightly more rounded */
   cursor: pointer;
   transition: all 0.15s ease-in-out;
@@ -509,8 +515,9 @@ const formatDate = (dateString: string): string => {
 }
 
 .item:hover {
-  border-color: #007bff;
-  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.1);
+  border-color: #1e293b;
+  box-shadow: 0 2px 8px rgba(30, 41, 59, 0.08);
+  transform: translateY(-1px);
 }
 
 .items-container.grid .item {
@@ -585,7 +592,7 @@ const formatDate = (dateString: string): string => {
   flex-direction: column;
   gap: 3px; /* Slightly more gap */
   font-size: 11px;
-  color: #6c757d;
+  color: #64748b;
   flex-shrink: 0; /* Prevent shrinking */
 }
 
@@ -624,13 +631,13 @@ const formatDate = (dateString: string): string => {
 
 /* File/folder specific styling */
 .item-folder:hover {
-  border-color: #ffc107;
-  box-shadow: 0 2px 4px rgba(255, 193, 7, 0.2);
+  border-color: #0f766e;
+  box-shadow: 0 2px 8px rgba(15, 118, 110, 0.12);
 }
 
 .item-file:hover {
-  border-color: #17a2b8;
-  box-shadow: 0 2px 4px rgba(23, 162, 184, 0.2);
+  border-color: #0369a1;
+  box-shadow: 0 2px 8px rgba(3, 105, 161, 0.12);
 }
 
 /* Content loading overlay - subtle and non-intrusive */
@@ -643,22 +650,22 @@ const formatDate = (dateString: string): string => {
 }
 
 .loading-indicator {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
   padding: 8px 12px;
   margin: 12px;
   display: flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(226, 232, 240, 0.8);
 }
 
 .loading-spinner-small {
   width: 16px;
   height: 16px;
-  border: 2px solid #e9ecef;
-  border-top: 2px solid #0d6efd;
+  border: 2px solid #f1f5f9;
+  border-top: 2px solid #1e293b;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }

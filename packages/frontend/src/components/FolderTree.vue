@@ -149,21 +149,21 @@ const onItemClick = (item: FileSystemItem) => {
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #f8f9fa;
-  border-right: 1px solid #dee2e6;
+  background-color: #ffffff;
+  border-right: 1px solid #e2e8f0;
 }
 
 .folder-tree-header {
   padding: 16px;
-  border-bottom: 1px solid #dee2e6;
-  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #f8fafc;
 }
 
 .folder-tree-header h3 {
   margin: 0 0 12px 0;
-  font-size: 16px;
-  font-weight: 600;
-  color: #343a40;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1e293b;
 }
 
 .search-container {
@@ -175,28 +175,29 @@ const onItemClick = (item: FileSystemItem) => {
 .search-input {
   flex: 1;
   padding: 8px 12px;
-  border: 1px solid #ced4da;
+  border: 1px solid #cbd5e1;
   border-radius: 4px;
   font-size: 14px;
+  color: #475569;
 }
 
 .search-input:focus {
   outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  border-color: #1e293b;
+  box-shadow: 0 0 0 2px rgba(30, 41, 59, 0.1);
 }
 
 .search-button,
 .clear-button,
 .retry-button {
   padding: 8px 12px;
-  border: 1px solid #007bff;
-  background-color: #007bff;
+  border: 1px solid #1e293b;
+  background-color: #1e293b;
   color: white;
   border-radius: 4px;
   cursor: pointer;
   font-size: 14px;
-  transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.2s ease;
 }
 
 .search-button:hover,
