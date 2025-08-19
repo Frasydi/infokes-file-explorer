@@ -403,11 +403,13 @@ const formatDate = (dateString: string): string => {
   border-bottom: 1px solid #dee2e6;
   background-color: #f8f9fa;
   gap: 16px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .view-options {
   display: flex;
   gap: 4px;
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
 .view-button {
@@ -418,6 +420,7 @@ const formatDate = (dateString: string): string => {
   border-radius: 4px;
   font-size: 14px;
   transition: all 0.15s ease-in-out;
+  min-width: 36px; /* Ensure minimum width */
 }
 
 .view-button:hover {
@@ -434,6 +437,7 @@ const formatDate = (dateString: string): string => {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
 .sort-select {
@@ -441,6 +445,7 @@ const formatDate = (dateString: string): string => {
   border: 1px solid #ced4da;
   border-radius: 4px;
   font-size: 14px;
+  min-width: 140px; /* Ensure minimum width */
 }
 
 .sort-order-button {
@@ -451,6 +456,7 @@ const formatDate = (dateString: string): string => {
   border-radius: 4px;
   font-size: 14px;
   transition: all 0.15s ease-in-out;
+  min-width: 36px; /* Ensure minimum width */
 }
 
 .sort-order-button:hover {
@@ -467,6 +473,9 @@ const formatDate = (dateString: string): string => {
   font-size: 12px;
   color: #6c757d;
   white-space: nowrap;
+  flex: 1; /* Take remaining space */
+  text-align: right; /* Align to right */
+  min-width: 0; /* Allow shrinking if needed */
 }
 
 .items-container {
@@ -477,25 +486,26 @@ const formatDate = (dateString: string): string => {
 
 .items-container.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Increased from 180px */
+  gap: 20px; /* Increased gap to prevent collision */
 }
 
 .items-container.list {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px; /* Increased gap for better separation */
 }
 
 .item {
   display: flex;
   align-items: center;
-  padding: 12px;
+  padding: 16px; /* Increased padding */
   border: 1px solid #dee2e6;
-  border-radius: 6px;
+  border-radius: 8px; /* Slightly more rounded */
   cursor: pointer;
   transition: all 0.15s ease-in-out;
   background-color: #ffffff;
+  position: relative; /* For better stacking context */
 }
 
 .item:hover {
@@ -506,74 +516,106 @@ const formatDate = (dateString: string): string => {
 .items-container.grid .item {
   flex-direction: column;
   text-align: center;
-  min-height: 120px;
+  min-height: 140px; /* Increased height to prevent cramping */
   justify-content: center;
+  max-width: 100%; /* Prevent overflow */
 }
 
 .items-container.list .item {
   flex-direction: row;
-  gap: 12px;
+  gap: 16px; /* Increased gap */
+  min-height: 56px; /* Ensure consistent height */
 }
 
 .item-icon {
-  font-size: 32px;
-  margin-bottom: 8px;
+  font-size: 36px; /* Increased icon size */
+  margin-bottom: 10px; /* More space */
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
 .items-container.list .item-icon {
-  font-size: 24px;
+  font-size: 28px; /* Larger in list view */
   margin-bottom: 0;
   flex-shrink: 0;
+  width: 40px; /* Fixed width to prevent collision */
+  text-align: center;
 }
 
 .item-details {
   flex: 1;
-  min-width: 0;
+  min-width: 0; /* Allow shrinking */
+  overflow: hidden; /* Prevent overflow */
 }
 
 .items-container.list .item-details {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%; /* Ensure full width usage */
+  min-width: 0; /* Allow shrinking */
 }
 
 .item-name {
   font-weight: 500;
   font-size: 14px;
-  margin-bottom: 4px;
+  margin-bottom: 6px; /* Increased margin */
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  max-width: 100%; /* Ensure it doesn't exceed container */
+  line-height: 1.3; /* Better line height */
 }
 
 .items-container.grid .item-name {
   text-align: center;
+  max-width: 180px; /* Limit width in grid view */
+  margin: 0 auto; /* Center align */
+}
+
+.items-container.list .item-name {
+  flex: 1; /* Take available space */
+  margin-right: 16px; /* Space before metadata */
+  margin-bottom: 0; /* No bottom margin in list view */
+  min-width: 120px; /* Minimum width to prevent cramping */
+  max-width: 300px; /* Maximum width to prevent collision */
 }
 
 .item-meta {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px; /* Slightly more gap */
   font-size: 11px;
   color: #6c757d;
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
 .items-container.list .item-meta {
   flex-direction: row;
-  gap: 12px;
+  gap: 16px; /* Increased gap to prevent collision */
   align-items: center;
+  white-space: nowrap; /* Prevent wrapping */
+  min-width: 0; /* Allow shrinking if needed */
+}
+
+.items-container.list .item-meta > span {
+  flex-shrink: 0; /* Prevent individual items from shrinking */
 }
 
 .item-type {
   text-transform: capitalize;
+  min-width: 40px; /* Minimum width for type */
 }
 
 .item-size {
   font-family: monospace;
+  min-width: 60px; /* Minimum width for size */
+  text-align: right; /* Right align for better appearance */
 }
 
 .item-modified {
   font-family: monospace;
+  min-width: 120px; /* Minimum width for date */
+  text-align: right; /* Right align for better appearance */
 }
 
 .items-container.grid .item-meta {
@@ -633,5 +675,108 @@ const formatDate = (dateString: string): string => {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+/* Responsive design fixes */
+@media (max-width: 768px) {
+  .view-controls {
+    padding: 8px 16px;
+    gap: 8px;
+  }
+  
+  .sort-select {
+    min-width: 120px;
+    font-size: 13px;
+  }
+  
+  .items-count {
+    font-size: 11px;
+  }
+  
+  .items-container.grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+    padding: 12px 16px;
+  }
+  
+  .items-container.list {
+    padding: 12px 16px;
+  }
+  
+  .item {
+    padding: 12px;
+  }
+  
+  .items-container.grid .item {
+    min-height: 120px;
+  }
+  
+  .item-icon {
+    font-size: 28px;
+  }
+  
+  .items-container.list .item-icon {
+    font-size: 24px;
+    width: 32px;
+  }
+  
+  .items-container.list .item-meta {
+    gap: 8px;
+    font-size: 10px;
+  }
+  
+  .item-size,
+  .item-modified {
+    min-width: auto;
+  }
+  
+  .items-container.list .item-name {
+    min-width: 80px;
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .view-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  
+  .view-controls > div {
+    justify-content: center;
+  }
+  
+  .items-count {
+    text-align: center;
+    order: -1; /* Move to top */
+  }
+  
+  .sort-select {
+    min-width: auto;
+    flex: 1;
+  }
+  
+  .items-container.grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 8px;
+  }
+  
+  .items-container.list .item-meta {
+    flex-direction: column;
+    gap: 2px;
+    align-items: flex-start;
+  }
+  
+  .items-container.list .item-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .items-container.list .item-name {
+    margin-right: 0;
+    max-width: 100%;
+  }
 }
 </style>
