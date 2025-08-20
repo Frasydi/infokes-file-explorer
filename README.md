@@ -2,8 +2,6 @@
 
 A modern, responsive file explorer built with Vue 3, TypeScript, and Node.js that mimics the functionality and design of Windows Explorer.
 
-![File Explorer Screenshot](./docs/images/screenshot.png)
-
 ## 🚀 Features
 
 ### Core Functionality
