@@ -208,43 +208,10 @@ docker-compose up --build
 # Backend: http://localhost:3001
 ```
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-Please read [CONTRIBUTING.md](./docs/contributing.md) for detailed guidelines.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
 - Inspired by Windows Explorer design
 - Built with modern web technologies
 - Follows industry best practices for code architecture
 
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/Frasydi/infokes-file-explorer/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/Frasydi/infokes-file-explorer/discussions)
-- **Email**: support@example.com
-
-## 🗺️ Roadmap
-
-- [ ] Drag and drop file upload
-- [ ] Context menu support
-- [ ] File preview functionality
-- [ ] Multi-select operations
-- [ ] Keyboard shortcuts
-- [ ] Dark theme support
-- [ ] File sharing capabilities
-- [ ] Advanced search filters
-
----
+#support@example.com
 
 Made with ❤️ by [Frasydi](https://github.com/Frasydi)
