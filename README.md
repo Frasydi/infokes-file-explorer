@@ -210,6 +210,4 @@ docker-compose up --build
 - Built with modern web technologies
 - Follows industry best practices for code architecture
 
-#support@example.com
-
 Made with ❤️ by [Frasydi](https://github.com/Frasydi)
